@@ -10,23 +10,21 @@ public class Account {
 
     public boolean checkNameToEmboss() {
 
+        if (StringUtils.isNotEmpty(name)) {
+
         if (name.length() >= 3 && name.length() <= 19) {
 
             if (name.charAt(0) != ' ' && name.charAt(name.length() - 1) != ' ') {
 
-                if (StringUtils.countMatches(name, " ") == 1) {
-                    return true;
+                    return StringUtils.countMatches(name, " ") == 1;
                 }
             }
         }
-//        if (name == null) {
-//
-//            return false;
-//        }
-
         return false;
     }
 }
+
+
 
 
 /*
